@@ -19,5 +19,14 @@
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.1.1",
     "postcss-cli": "^4.1.1"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonzoibox/booking-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gonzoibox/booking-app/issues"
+  },
+  "homepage": "https://github.com/gonzoibox/booking-app#readme"
 }
