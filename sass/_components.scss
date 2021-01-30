@@ -16,7 +16,6 @@
     order: 1;
     flex: 0 0 100%;
     background-color: var(--color-grey-light-2);
-
   }
 
   &__input {
@@ -142,7 +141,7 @@
     }
 
     @media only screen and (max-width: $bp-medium) {
-     flex: 1;
+      flex: 1;
     }
   }
 
@@ -189,7 +188,7 @@
 
     @media only screen and (max-width: $bp-small) {
       flex-direction: column;
-      padding: 1.5rem .5rem;
+      padding: 1.5rem 0.5rem;
     }
   }
 
@@ -201,10 +200,10 @@
 
     @media only screen and (max-width: $bp-small) {
       margin-right: 0;
-      margin-bottom: .7rem;
+      margin-bottom: 0.7rem;
       width: 1.5rem;
       height: 1.5rem;
-    }    
+    }
   }
 }
 
@@ -222,334 +221,341 @@
 
 //Gallery
 .gallery {
-    display: flex;
+  display: flex;
 
-    &__photo {
-        width: 100%;
-        display: block;
-    }
+  &__photo {
+    width: 100%;
+    display: block;
+  }
 }
 
 //Hotel overview
 .overview {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: var(--line);
+  align-items: center;
+
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
+  }
+
+  &__stars {
+    margin-right: auto;
     display: flex;
-    justify-content: space-between;
-    border-bottom: var(--line);
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__icon-location {
+    margin-right: 0.5rem;
+  }
+
+  &__location {
+    font-size: 1.2rem;
+    display: flex;
     align-items: center;
+  }
 
-    &__heading {
-        font-size: 2.25rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding: 1.5rem 3rem;
+  &__rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-        @media only screen and (max-width: $bp-small) {
-          font-style: 1.8rem;
-          padding: 1.25rem 2rem;
-        }
+    background-color: var(--color-primary);
+    margin-left: 3rem;
+    color: #fff;
+    align-self: stretch;
+    padding: 0 2.25rem;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
     }
+  }
 
-    &__stars {
-        margin-right: auto;
-        display: flex;
+  &__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -3px;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
     }
+  }
 
-    &__icon-star,
-    &__icon-location {
-        width: 1.75rem;
-        height: 1.75rem;
-        fill: var(--color-primary);
+  &__rating-count {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 0.5rem;
     }
-
-    &__icon-location {
-        margin-right: .5rem;
-    }
-
-    &__location {
-        font-size: 1.2rem;
-        display: flex;
-        align-items: center;
-    }
-
-    &__rating {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        background-color: var(--color-primary);
-        margin-left: 3rem;
-        color: #fff;
-        align-self: stretch;
-        padding: 0 2.25rem;
-
-        @media only screen and (max-width: $bp-small) {
-          padding: 0 1.5rem;
-        }
-    }
-
-    &__rating-average {
-        font-size: 2.25rem;
-        font-weight: 300;
-        margin-bottom: -3px;
-
-        @media only screen and (max-width: $bp-small) {
-          font-size: 1.8rem;
-        }
-    }
-
-    &__rating-count {
-        font-size: .8rem;
-        text-transform: uppercase;
-
-        @media only screen and (max-width: $bp-small) {
-          font-size: .5rem;
-        }
-    }
+  }
 }
 
 //Button-inline
 .btn-inline {
-    border: none;
-    color: var(--color-primary);
-    font-size: inherit;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
-    display: inline-block;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all .2sec;
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2sec;
 
-    & span {
-        margin-left: 3px;
-        transition: margin-left .2s;
+  & span {
+    margin-left: 3px;
+    transition: margin-left 0.2s;
+  }
+
+  &:hover {
+    color: var(--color-grey-dark-1);
+
+    span {
+      margin-left: 8px;
     }
+  }
 
-    &:hover {
-        color: var(--color-grey-dark-1);
-
-        span {
-            margin-left: 8px;
-        }
-    }
-
-    &:focus {
-        outline: none;
-        animation: pulsate 1s infinite;
-    }
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
 }
 
 @keyframes pulsate {
-    0% {
-        transform: scale(1);
-        box-shadow: none;
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 1rem 4rem rgba(0, 0, 0, .25);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: none;
-    }
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
 }
 
 //Paragraph
 .paragraph:not(:last-of-type) {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 //List
 .list {
-    margin: 3rem 0;
-    padding: 3rem 0;
-    border-top: var(--line);
-    border-bottom: var(--line);
-    list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  list-style: none;
 
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    &__item {
-        flex: 0 0 50%;
-    }
+  &__item {
+    flex: 0 0 50%;
+  }
 
-    &__item::before {
-        content: "";
-        display: inline-block;
-        height: 1rem;
-        width: 1rem;
-        margin-right: .7rem;
+  &__item::before {
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.7rem;
 
-        //Older browsers
-        //background-image: url(../img/chevron-thin-right.svg);
-        //background-size: cover;
+    //Older browsers
+    //background-image: url(../img/chevron-thin-right.svg);
+    //background-size: cover;
 
-        //Newer broesers - masks
-        background-color: var(--color-primary);
-        -webkit-mask-image: url(../img/chevron-thin-right.svg);
-        -webkit-mask-size: cover;
-        mask-image: url(../img/chevron-thin-right.svg);
-        mask-size: cover;
-    }
+    //Newer broesers - masks
+    background-color: var(--color-primary);
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
+    mask-image: url(../img/chevron-thin-right.svg);
+    mask-size: cover;
+  }
 }
 
 //Recommend
 .recommend {
-    font-size: 1.3rem;
-    color: var(--color-grey-dark-3);
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  display: flex;
+  align-items: center;
+
+  &__count {
+    margin-right: auto;
+  }
+
+  &__friends {
     display: flex;
-    align-items: center;
+  }
 
+  &__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
 
-    &__count {
-        margin-right: auto;
+    &:not(:last-child) {
+      margin-right: -2rem;
     }
-
-    &__friends {
-      display: flex;
-    }
-
-    &__photo {
-        box-sizing: content-box;
-        height: 4rem;
-        width: 4rem;
-        border-radius: 50%;
-        border: 2px solid #fff; 
-
-        &:not(:last-child) {
-            margin-right: -2rem;
-        }
-    }
+  }
 }
 
 //Reviews
 .review {
-    background-color: #fff;
-    box-shadow: var(--shadow-light);
-    padding: 3rem;
-    margin-bottom:  3.5rem;
-    overflow: hidden;
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+  position: relative;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    margin-bottom: 2rem;
     position: relative;
+    z-index: 10;
+  }
 
-    @media only screen and (max-width: $bp-medium) {
-      padding: 2rem;
-      margin-bottom: 3rem;
-    }
+  &__user {
+    display: flex;
+    align-items: center;
+  }
 
-    &__text {
-        margin-bottom: 2rem;
-        position: relative;
-        z-index: 10;
-    }
+  &__photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+  }
 
-    &__user {
-        display: flex;
-        align-items: center;
-    }
+  &__user-box {
+    margin-right: auto;
+    margin-left: 2rem;
+  }
 
-    &__photo {
-        width: 4.5rem;
-        height: 4.5rem;
-        border-radius: 50%;
-    }
+  &__user-name {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
 
-    &__user-box {
-        margin-right: auto;
-        margin-left: 2rem;
-    }
+  &__user-date {
+    font-size: 1.1rem;
+    color: var(--color-grey-dark-2);
+  }
 
-    &__user-name {
-        text-transform: uppercase;
-        font-weight: 600;
-    }
+  &__rating {
+    color: var(--color-primary);
+    font-size: 2.25rem;
+    font-weight: 300;
+  }
 
-    &__user-date {
-        font-size: 1.1rem;
-        color: var(--color-grey-dark-2);
-    }
-
-    &__rating {
-        color: var(--color-primary);
-        font-size: 2.25rem;
-        font-weight: 300;
-    }
-
-    &::before {
-        content: "\201C";
-        font-family: sans-serif;
-        font-size: 20rem;
-        color: var(--color-grey-light-2);
-        position: absolute;
-        top: -9.75rem;
-        left: -.7rem;
-        z-index: 1;
-    }
+  &::before {
+    content: "\201C";
+    font-family: sans-serif;
+    font-size: 20rem;
+    color: var(--color-grey-light-2);
+    position: absolute;
+    top: -9.75rem;
+    left: -0.7rem;
+    z-index: 1;
+  }
 }
 
 //CTA
 .cta {
-    padding: 3.5rem 0;
-    text-align: center;
+  padding: 3.5rem 0;
+  text-align: center;
 
-    @media only screen and (max-width: $bp-medium) {
-      padding: 2.5rem 0;
-    }
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
 
-    &__book-now {
-        text-transform: uppercase;
-        font-size:  2rem;
-        font-weight: 300;
-        margin-bottom: 2.5rem;
-    }
+  &__book-now {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+  }
 }
 
 //Button CTA
 .btn {
-    font-size: 1.5rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    border-radius: 100px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
 
-    & > * {
-        height: 100%;
-        width: 100%;
-        display: inline-block;
-        transition: all .2s;
-    }
+  & > * {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    transition: all 0.2s;
+  }
 
-    &__visible {
-        padding: 2rem 8rem;
-    }
+  &__visible {
+    padding: 2rem 8rem;
+  }
 
-    &__invisible {
-        position: absolute;
-        padding: 2rem 0;
-        top: -100%;
-        left: 0;
-    }
+  &__invisible {
+    position: absolute;
+    padding: 2rem 0;
+    top: -100%;
+    left: 0;
+  }
 
-    &:hover {
-    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
-    }
+  &:hover {
+    background-image: linear-gradient(
+      to left,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+  }
 
-    &:hover &__visible {
-        transform: translateY(100%);
-    }
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
 
-    &:hover &__invisible {
-        top: 0;
-    }
+  &:hover &__invisible {
+    top: 0;
+  }
 
-    &:focus {
-        outline: none;
-        animation: pulsate 1s infinite;
-    }
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
 }

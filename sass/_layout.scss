@@ -16,7 +16,7 @@
   font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
-  border-bottom: var(--line); 
+  border-bottom: var(--line);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,7 +53,7 @@
   display: flex;
   padding: 4.5rem;
   background-color: var(--color-grey-light-2);
-  border-bottom: var(--line); 
+  border-bottom: var(--line);
 
   @media only screen and (max-width: $bp-medium) {
     padding: 3rem;
